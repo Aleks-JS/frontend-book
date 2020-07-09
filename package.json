@@ -1,0 +1,24 @@
+{
+  "name": "front-end-dev-book",
+  "version": "1.0.0",
+  "description": "Rate under the book \"Front-End Web Development: The Big Nerd Ranch Guide\"",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "normalize.css": "^8.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aleks-JS/frontend-book.git"
+  },
+  "author": "Aleks Kresnikov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aleks-JS/frontend-book/issues"
+  },
+  "homepage": "https://github.com/Aleks-JS/frontend-book#readme"
+}
