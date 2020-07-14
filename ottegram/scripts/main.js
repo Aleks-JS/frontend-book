@@ -14,7 +14,7 @@ function imageFromThumb(thumbnail) {
 }
 
 function titleFromThumb(thumbnail) {
-  thumbnail.getAttribute('detail-image-title');
+  return thumbnail.getAttribute('data-image-title');
 }
 
 function setDetailsFromThumb(thumbnail) {
@@ -27,3 +27,16 @@ function addThumbClickHandler(thumb) {
     setDetailsFromThumb(thumb);
   });
 }
+
+function getThumbnailsArray() {
+  const thumbnails = document.querySelectorAll(THUMBNAIL_LINK_SELECTOR),
+    thumbnailArray = [].slice.call(thumbnails);
+  return thumbnailArray;
+}
+
+function initializeEvents() {
+  const thumbnails = getThumbnailsArray();
+  thumbnails.forEach(addThumbClickHandler);
+}
+
+initializeEvents();
