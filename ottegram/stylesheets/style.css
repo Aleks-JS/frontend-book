@@ -113,6 +113,23 @@ a {
   font-size: 40px;
 }
 
+.hidden-detail .main-content {
+  flex-direction: column;
+}
+
+.hidden-detail .detail-image-container {
+  display: none;
+}
+
+.hidden-detail .thumbnail-list {
+  flex-direction: column;
+  align-items: center;
+}
+
+.hidden-detail .thumbnail-item {
+  max-width: 70%;
+}
+
 @media all and (orientation: landscape) {
   .main-content {
     flex-direction: row;
