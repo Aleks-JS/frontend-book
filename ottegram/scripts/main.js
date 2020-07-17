@@ -1,8 +1,10 @@
 // Declaring string variables
 const DETAIL_IMAGE_SELECTOR = '[data-image-role="target"]',
   DETAIL_TITLE_SELECTOR = '[data-image-role="title"]',
+  DETAIL_FRAME_SELECTOR = '[data-image-role="frame"]',
   THUMBNAIL_LINK_SELECTOR = '[data-image-role="trigger"]',
   HIDDEN_DETAIL_CLASS = 'hidden-detail',
+  TINY_EFFECT_CLASS = 'is-tiny',
   ESC_KEY = 27;
 
 function setDetail(imgUrl, titleText) {
@@ -26,9 +28,13 @@ function setDetailsFromThumb(thumbnail) {
   setDetail(imageFromThumb(thumbnail), titleFromThumb(thumbnail));
 }
 
-// Function to remove class hiding large image
 function showDetails() {
+  const frame = document.querySelector(DETAIL_FRAME_SELECTOR);
   document.body.classList.remove(HIDDEN_DETAIL_CLASS);
+  frame.classList.add(TINY_EFFECT_CLASS);
+  setTimeout(() => {
+    frame.classList.remove(TINY_EFFECT_CLASS);
+  }, 50);
 }
 
 function addThumbClickHandler(thumb) {
