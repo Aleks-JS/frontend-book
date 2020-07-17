@@ -103,7 +103,7 @@ a {
 .detail-image-frame {
   position: relative;
   text-align: center;
-  transition: transform 0.3s;
+  transition: transform 0.3s cubic-bezier(1,.22,.53,.95);
 }
 
 .is-tiny {
