@@ -26,6 +26,9 @@
       fn(data);
       this.$formElement[0].reset();
       this.$formElement[0].elements[0].focus();
+      $('.rangeValue').text('30').css({ color: 'orange' });
+      console.log($('#strengthLevel')[0].value);
+      console.log($('#strengthLevel'));
     });
   };
 
