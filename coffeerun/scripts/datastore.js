@@ -2,7 +2,8 @@
   const App = window.App || {};
 
   function DataStore() {
-    this.data = {};
+    const data = {};
+    this.data = data;
   }
 
   // Прототип конструктора *en* Constructor prototype
