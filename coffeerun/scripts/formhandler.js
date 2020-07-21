@@ -15,6 +15,15 @@
     console.log('Setting submit handler for form');
     this.$formElement.on('submit', e => {
       e.preventDefault();
+
+      const data = {};
+      $(this.$formElement)
+        .serializeArray()
+        .forEach(function (i) {
+          data[i.name] = i.value;
+          console.log(`${i.name} is ${i.value}`);
+        });
+      console.log(data);
     });
   };
 
