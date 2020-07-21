@@ -23,8 +23,9 @@
           data[i.name] = i.value;
           console.log(`${i.name} is ${i.value}`);
         });
-      console.log(data);
       fn(data);
+      this.$formElement[0].reset();
+      this.$formElement[0].elements[0].focus();
     });
   };
 
