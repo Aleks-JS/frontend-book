@@ -1,0 +1,36 @@
+{
+  "name": "front-end-dev-book",
+  "version": "1.0.0",
+  "description": "Rate under the book \"Front-End Web Development: The Big Nerd Ranch Guide\"",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "^4.5.0",
+    "browser-sync": "^2.26.10",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.7",
+    "normalize.css": "^8.0.1",
+    "prettier": "^2.0.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aleks-JS/frontend-book.git"
+  },
+  "author": "Aleks Kresnikov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aleks-JS/frontend-book/issues"
+  },
+  "homepage": "https://github.com/Aleks-JS/frontend-book#readme"
+}
