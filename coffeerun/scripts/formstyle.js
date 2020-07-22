@@ -21,6 +21,9 @@
         });
       }
     });
+    $('#res').on('click', function () {
+      $('.rangeValue').text('30').css({ color: 'orange' });
+    });
   }
 
   App.rangeStyle = rangeStyle;
