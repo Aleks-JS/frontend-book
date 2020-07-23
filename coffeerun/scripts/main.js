@@ -5,6 +5,7 @@
   const { DataStore } = App;
   const { FormHandler } = App;
   const { rangeStyle } = App;
+  const { createModal } = App;
   const myTruck = new Truck('ncc-1701', new DataStore());
   const formHandler = new FormHandler(FORM_SELECTOR);
 

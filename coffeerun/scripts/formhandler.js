@@ -1,5 +1,6 @@
 (function (window) {
   const App = window.App || {};
+  const { createModal } = App;
   const $ = window.jQuery;
   function FormHandler(selector) {
     if (!selector) {
@@ -23,6 +24,10 @@
           data[i.name] = i.value;
           console.log(`${i.name} is ${i.value}`);
         });
+      console.log(data.strength);
+
+      App.createModal(data.size, data.flavor, data.strength, data.emailAddress);
+
       fn(data);
       this.$formElement[0].reset();
       this.$formElement[0].elements[0].focus();

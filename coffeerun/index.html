@@ -2,79 +2,103 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
-  <title>CoffeeRun</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <title>CoffeeRun</title>
 </head>
 
 <body class="container">
-  <header>
-    <h1>CoffeeRun</h1>
-  </header>
-  <section>
-    <div class="card">
-      <div class="card-body">
-        <form data-coffee-order="form">
-          <div class="form-group">
-            <label for="coffeeOrder">Coffee Order</label>
-            <input name="coffee" id="coffeeOrder" class="form-control" autofocus>
-          </div>
-          <div class="form-group">
-            <label for="emailInput">Email</label>
-            <input type="email" class="form-control" name="emailAddress" id="emailInput" value=""
-              placeholder="example@who.com">
-          </div>
-          <div class="radio">
-            <label for="short">
-              <input type="radio" name="size" value="short" id="short">
-              Short
-            </label>
-          </div>
-          <div class="radio">
-            <label for="tall">
-              <input type="radio" name="size" value="tall" id="tall" checked>
-              Tall
-            </label>
-          </div>
-          <div class="radio">
-            <label for="grande">
-              <input type="radio" name="size" value="grande" id="grande">
-              Grande
-            </label>
-          </div>
-          <div class="radio">
-            <label for="coffee-zilla">
-              <input type="radio" name="size" value="coffee-zilla" id="coffee-zilla">
-              Coffee-zilla
-            </label>
-          </div>
-          <div class="form-group">
-            <label for="flavorShot">Flavor Shot</label>
-            <select name="flavor" id="flavorShot" class="form-control">
-              <option value="">None</option>
-              <option value="caramel">Caramel</option>
-              <option value="almond">Almond</option>
-              <option value="mocha">Mocha</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="strengthLevel">Caffein Rating: <span class="rangeValue" style="color: orange;">30</span></label>
-            <input type="range" name="strength" class="form-control-range" id="strengthLevel" value="30">
-          </div>
-          <button type="submit" class="btn btn-outline-dark">Submit</button>
-          <button type="reset" id="res" class="btn btn-outline-dark">Reset</button>
-        </form>
-      </div>
+    <header>
+        <h1>CoffeeRun</h1>
+    </header>
+    <section>
+        <div class="card">
+            <div class="card-body">
+                <form data-coffee-order="form">
+                    <div class="form-group">
+                        <label for="coffeeOrder">Coffee Order</label>
+                        <input name="coffee" id="coffeeOrder" class="form-control" autofocus />
+                    </div>
+                    <div class="form-group">
+                        <label for="emailInput">Email</label>
+                        <input type="email" class="form-control" name="emailAddress" id="emailInput" value=""
+                            placeholder="example@who.com" />
+                    </div>
+                    <div class="radio">
+                        <label for="short">
+                            <input type="radio" name="size" value="short" id="short" />
+                            Short
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label for="tall">
+                            <input type="radio" name="size" value="tall" id="tall" checked />
+                            Tall
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label for="grande">
+                            <input type="radio" name="size" value="grande" id="grande" />
+                            Grande
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label for="coffee-zilla">
+                            <input type="radio" name="size" value="coffee-zilla" id="coffee-zilla" />
+                            Coffee-zilla
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="flavorShot">Flavor Shot</label>
+                        <select name="flavor" id="flavorShot" class="form-control">
+                            <option value="">None</option>
+                            <option value="caramel">Caramel</option>
+                            <option value="almond">Almond</option>
+                            <option value="mocha">Mocha</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="strengthLevel">Caffein Rating:
+                            <span class="rangeValue" style="color: orange;">30</span></label>
+                        <input type="range" name="strength" class="form-control-range" id="strengthLevel" value="30" />
+                    </div>
+                    <button type="submit" class="btn btn-outline-dark">Submit</button>
+                    <button type="reset" id="res" class="btn btn-outline-dark">
+                        Reset
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">You are incredible!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
-  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="scripts/formhandler.js"></script>
-  <script src="scripts/datastore.js"></script>
-  <script src="scripts/truck.js"></script>
-  <script src="scripts/formstyle.js"></script>
-  <script src="scripts/main.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="scripts/formhandler.js"></script>
+    <script src="scripts/datastore.js"></script>
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/truck.js"></script>
+    <script src="scripts/formstyle.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
