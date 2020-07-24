@@ -35,6 +35,13 @@
     description += `${coffeeOrder.coffee}, `;
     description += ` (${coffeeOrder.emailAdress})`;
     description += ` [${coffeeOrder.strength}x]`;
+
+    $label.append($checkbox);
+    $label.append(description);
+    $div.append($label);
+
+    // Делаем поддерево DOM доступным в виде свойства экземпляра, присвоив его свойству this.$element
+    this.$element = $div;
   }
 
   App.Checklist = Checklist;
