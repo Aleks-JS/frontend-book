@@ -44,6 +44,14 @@
     this.$element = $div;
   }
 
+  Checklist.prototype.addRow = function (coffeeOrder) {
+    // Создаем новый экземпляр строки на основе информации о заказе кофе
+    const rowElement = new Row(coffeeOrder);
+
+    // Добавляем свойство $element нового экземпляра строки в перечень
+    this.$element.append(rowElement.$element);
+  };
+
   App.Checklist = Checklist;
   window.App = App;
 })(window);

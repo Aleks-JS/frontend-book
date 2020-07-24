@@ -1,9 +1,11 @@
 (function (window) {
   const FORM_SELECTOR = '[data-coffee-order="form"]';
+  const CHECKLIST_SELECTOR = '[data-coffee-order]';
   const { App } = window;
   const { Truck } = App;
   const { DataStore } = App;
   const { FormHandler } = App;
+  const { CheckList } = App;
   const { rangeStyle } = App;
   const { createModal } = App;
   const myTruck = new Truck('ncc-1701', new DataStore());
