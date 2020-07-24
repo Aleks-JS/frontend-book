@@ -76,17 +76,66 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">You are incredible!</h5>
+                    <h5 class="modal-title" id="myModalLabel">You are incredible!</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <div class="form-group" id="first-screen">
+                        <p class="row ml-2">You have placed an order for the largest portion of the strongest coffee
+                            with
+                            the perfect aroma ...! In honor of this, we invite you to choose the options that you want
+                            to
+                            see in the future when ordering coffee from us!</p>
+                        <div class="d-flex justify-content-around pb-2" id="btn-choose">
+                            <button type="button" id="btn-ok" class="btn btn-primary btn-lg">Ok,
+                                now!</button>
+                            <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Next
+                                time...</button>
+                        </div>
+                        <form class="d-none" id="no-email">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone
+                                    else.</small>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="submit-email">Submit</button>
+                        </form>
+                    </div>
+                    <form id="option-form" class="mt-2 p-2 border border-light rounded d-none">
+                        <div class="form-group">
+                            <p>Choose any options:</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Default checkbox
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                <label class="form-check-label" for="defaultCheck2">
+                                    Default checkbox
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                <label class="form-check-label" for="defaultCheck3">
+                                    Default checkbox
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                <label class="form-check-label" for="defaultCheck4">
+                                    Default checkbox
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>

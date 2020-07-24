@@ -24,7 +24,6 @@
           data[i.name] = i.value;
           console.log(`${i.name} is ${i.value}`);
         });
-      console.log(data.strength);
 
       App.createModal(data.size, data.flavor, data.strength, data.emailAddress);
 
