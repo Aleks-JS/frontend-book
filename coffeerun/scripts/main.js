@@ -1,6 +1,6 @@
 (function (window) {
   const FORM_SELECTOR = '[data-coffee-order="form"]';
-  const CHECKLIST_SELECTOR = '[data-coffee-order]';
+  const CHECKLIST_SELECTOR = '[data-coffee-orders="checklist"]';
   const { App } = window;
   const { Truck } = App;
   const { DataStore } = App;
