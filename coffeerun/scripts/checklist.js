@@ -2,7 +2,7 @@
   const App = window.App || {};
   const $ = window.jQuery;
 
-  function Checklist(selector) {
+  function CheckList(selector) {
     if (!selector) {
       throw new Error('No selector provided');
     }
@@ -44,7 +44,7 @@
     this.$element = $div;
   }
 
-  Checklist.prototype.addRow = function (coffeeOrder) {
+  CheckList.prototype.addRow = function (coffeeOrder) {
     // Создаем новый экземпляр строки на основе информации о заказе кофе
     const rowElement = new Row(coffeeOrder);
 
@@ -52,6 +52,6 @@
     this.$element.append(rowElement.$element);
   };
 
-  App.Checklist = Checklist;
+  App.CheckList = CheckList;
   window.App = App;
 })(window);
