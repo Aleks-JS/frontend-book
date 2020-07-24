@@ -26,6 +26,15 @@
       type: 'checkbox',
       value: coffeeOrder.emailAdress,
     });
+
+    // Переменная description это текстовое описание, которое будет отображаться рядом с флажком
+    let description = `${coffeeOrder.size}, `;
+    if (coffeeOrder.flavor) {
+      description += `${coffeeOrder.flavor}, `;
+    }
+    description += `${coffeeOrder.coffee}, `;
+    description += ` (${coffeeOrder.emailAdress})`;
+    description += ` [${coffeeOrder.strength}x]`;
   }
 
   App.Checklist = Checklist;
