@@ -15,6 +15,19 @@
     }
   }
 
+  // Метод обработки клика
+  CheckList.prototype.addClickHandler = function (fn) {
+    this.$element.on(
+      'click',
+      'input',
+      function (event) {
+        const email = event.target.value;
+        this.removeRow(email);
+        fn(email);
+      }.bind(this)
+    );
+  };
+
   // конструктор Row будет отвечать за создание всех элементов DOM
   function Row(coffeeOrder) {
     const $div = $('<div></div>', {
