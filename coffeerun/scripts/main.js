@@ -10,6 +10,7 @@
   const { createModal } = App;
   const myTruck = new Truck('ncc-1701', new DataStore());
   const checkList = new CheckList(CHECKLIST_SELECTOR);
+  checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
   const formHandler = new FormHandler(FORM_SELECTOR);
   window.myTruck = myTruck;
 
