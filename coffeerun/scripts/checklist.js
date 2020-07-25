@@ -7,6 +7,8 @@
       throw new Error('No selector provided');
     }
 
+    console.log(this.$element);
+
     this.$element = $(selector);
     if (this.$element.length === 0) {
       throw new Error(`Could not find element with selector: ${selector}`);
@@ -24,7 +26,7 @@
 
     const $checkbox = $('<input></input>', {
       type: 'checkbox',
-      value: coffeeOrder.emailAdress,
+      value: coffeeOrder.emailAddress,
     });
 
     // Переменная description это текстовое описание, которое будет отображаться рядом с флажком
@@ -45,6 +47,8 @@
   }
 
   CheckList.prototype.addRow = function (coffeeOrder) {
+    // Удаляем все имеющиеся строки с входящим email
+    this.removeRow(coffeeOrder.emailAddress);
     // Создаем новый экземпляр строки на основе информации о заказе кофе
     const rowElement = new Row(coffeeOrder);
 
@@ -55,7 +59,7 @@
   CheckList.prototype.removeRow = function (email) {
     this.$element
       .find(`[value="${email}"]`)
-      .closest('[value-coffee-order="checkbox"]')
+      .closest('[data-coffee-order="checkbox"]')
       .remove();
   };
 
