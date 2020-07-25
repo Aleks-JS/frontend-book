@@ -52,6 +52,13 @@
     this.$element.append(rowElement.$element);
   };
 
+  CheckList.prototype.removeRow = function (email) {
+    this.$element
+      .find(`[value="${email}"]`)
+      .closest('[value-coffee-order="checkbox"]')
+      .remove();
+  };
+
   App.CheckList = CheckList;
   window.App = App;
 })(window);
