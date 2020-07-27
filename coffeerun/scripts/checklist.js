@@ -43,13 +43,13 @@
     });
 
     // Переменная description это текстовое описание, которое будет отображаться рядом с флажком
-    let description = ` ${coffeeOrder.size}, `;
+    let description = ` [${coffeeOrder.strength}x],`;
+    description += ` ${coffeeOrder.size}, `;
     if (coffeeOrder.flavor) {
       description += `${coffeeOrder.flavor}, `;
     }
     description += `${coffeeOrder.coffee}, `;
     description += ` (${coffeeOrder.emailAddress})`;
-    description += ` [${coffeeOrder.strength}x]`;
 
     $label.append($checkbox);
     $label.append(description);
