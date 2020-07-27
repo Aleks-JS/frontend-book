@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 (function (window) {
   const App = window.App || {};
   const $ = window.jQuery;
@@ -6,8 +7,6 @@
     if (!selector) {
       throw new Error('No selector provided');
     }
-
-    console.log(this.$element);
 
     this.$element = $(selector);
     if (this.$element.length === 0) {
@@ -43,13 +42,30 @@
     });
 
     // Переменная description это текстовое описание, которое будет отображаться рядом с флажком
-    let description = ` [${coffeeOrder.strength}x],`;
-    description += ` ${coffeeOrder.size}, `;
+    let description = ` [${coffeeOrder.strength}x]`;
+    description += `, ${coffeeOrder.size}`;
     if (coffeeOrder.flavor) {
-      description += `${coffeeOrder.flavor}, `;
+      let fontColor = '';
+      switch (coffeeOrder.flavor) {
+        case 'caramel':
+          fontColor = 'green';
+          break;
+        case 'almond':
+          fontColor = 'red';
+          break;
+        case 'mocha':
+          fontColor = 'blue';
+          break;
+      }
+      description += `,<span id="flavor-name" style="color:${fontColor}"> ${coffeeOrder.flavor}</span>`;
     }
-    description += `${coffeeOrder.coffee}, `;
-    description += ` (${coffeeOrder.emailAddress})`;
+
+    if (coffeeOrder.coffee) {
+      description += `, ${coffeeOrder.coffee}`;
+    }
+    if (coffeeOrder.emailAddress) {
+      description += `, (${coffeeOrder.emailAddress})`;
+    }
 
     $label.append($checkbox);
     $label.append(description);
